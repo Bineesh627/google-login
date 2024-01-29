@@ -3,8 +3,8 @@ body {
 }
 
 img {
-  max-width: 100px;
-  max-height: 40px;
+  max-width: 90px;
+  max-height: 32px;
 }
 
 .maindiv {
@@ -12,21 +12,22 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 400px;
-  height: 400px;
+  width: 382px;
+  height: 450px;
   padding: 2rem;
   border-radius: 0.5rem;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #DCDCDC;
   text-align: center;
 }
 
 .maindiv .Fields {
+  margin-top: 70px;
   display: inline-block;
   height: 90px;
   position: relative;
 }
 
-h1 {
+.top-head {
   font-size: 24px;
   font-weight: 200px;
 }
@@ -37,15 +38,8 @@ a {
   text-align: justify;
 }
 
-
-
-.check-box {
-  margin-right: 200px;
-  display: flex;
-}
-
 .flex-container {
-  margin-top: 56px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
 }
@@ -155,4 +149,69 @@ button {
   outline: none;
   min-width: 88px;
 
+}
+
+.selected-user {
+  width: 240px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  margin-left: 20%;
+}
+
+.selected-user img {
+  height: 23px;
+  width: 23px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.selected-user img span {
+  text-align: justify;
+  
+}
+
+.checkbox-container {
+  margin-right: 200px;
+  display: flex;
+}
+
+.checkbox-container label {
+  cursor: pointer;
+  display: flex;
+}
+
+.checkbox-container input[type='checkbox'] {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-container label::before {
+  content: '';
+  width: 1em;
+  height: 1em;
+  border-radius: .15em;
+  margin-right: .5em;
+  border: .05em solid black;
+}
+
+/* .checkbox-container label:hover::before,
+.checkbox-container input[type='checkbox']:hover + label::before {
+  background-color: black;
+} */
+
+.checkbox-container input[type='checkbox']:focus + label::before {
+  box-shadow: 0 0 20px #549bec;
+}
+
+.checkbox-container input[type='checkbox']:checked + label::before {
+  content: '\002714';
+  background-color: #1A73E9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

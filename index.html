@@ -4,36 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Fieldset</title>
+    <title>Sign in - Google Accounts</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="shortcut icon" href="img/google-symbol.png" type="image/x-icon">
 </head>
 
 <body>
 
     <div class="maindiv">
         <img src="img/google.png" alt="Google">
-        <h1>Welcome</h1>
-        <h3>Continue to Gmail</h3>
+        <p class="top-head">Welcome</p>
+        <div class="selected-user">
+            <img src="img/profile.png" alt="profile">
+            <span>example@gmail.com</span>
+        </div>
         <div class="inputs">
             <div class="Fields">
-                <div class="Fieldset">
-                    <input type="password" class="Before-FS" required="">
-                    <h1 class="Fs-H"><span>Enter your password</span></h1>
-                    <label class="placeholder">Enter your password</label>
-                </div>
-                <div class="check-box">
-                    <input type="checkbox">
-                    <p>Show password</p>
-                </div>
-
-                <div class="flex-container">
-                    <div class="cells">
-                        <a href="">Try another way</a>
+                <form action="" method="post">
+                    <div class="Fieldset">
+                        <input type="password" id="password" name="password" class="Before-FS" autocomplete="current-password" spellcheck="false" tabindex="0" aria-label="Enter your password" aria-disabled="false" autocapitalize="off" dir="ltr" data-initial-dir="ltr" data-initial-value="" badinput="false" required>
+                        <h1 class="Fs-H"><span>Enter your password</span></h1>
+                        <label class="placeholder">Enter your password</label>
                     </div>
-                    <div class="cell">
-                        <button>Next</button>
+                    <div class="checkbox-container">
+                        <input id="cb1" type="checkbox">
+                        <label for="">Show password</label>
                     </div>
-                </div>
+    
+                    <div class="flex-container">
+                        <div class="cells">
+                            <a href="">Try another way</a>
+                        </div>
+                        <div class="cell">
+                            <button type="submit">Next</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
